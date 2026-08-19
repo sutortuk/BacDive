@@ -40,5 +40,5 @@ for sp in sp_list:
                 rows.append(strain_dict)
 
 son_tablo = pd.DataFrame(rows)
-son_tablo.to_csv("data/tum_bakteriler_oxygen_tablosu.csv", index=False, encoding="utf-8-sig")
+son_tablo.to_csv("results/tum_bakteriler_oxygen_tablosu.csv", index=False, encoding="utf-8-sig")
 print(son_tablo)
