@@ -21,3 +21,11 @@ Bu depo kapsamında BacDive veri tabanından veri indirme betikleri oluştururuz
 
 ## Tür Listesinin Okunması:
    species dosyası UTF-8 kodlamasıyla açılarak satır satır okunur. Boşluklar "strip()" ile temizlenir. Tür isimleri bir Python listesine aktarılır.
+   
+## Veri Tabanı Taraması ve Bilgilerin Çekilmesi:
+  Listedeki her bir tür adı için taksonomi araması "client.search(taxonomy=sp)" yapılır.
+  Arama sonucunda elde edilen tüm suşlar client.retrieve() fonksiyonu ile çekilerek bir liste yapısına dönüştürülür.
+   
+#Oksijen Toleransı Verisinin Ayıklanması:
+  Her suş kaydının `Physiology and metabolism` başlığı altındaki `oxygen tolerance` alanı taranır.
+  Ham verinin formatına göre ayrıştırma yapılır:
