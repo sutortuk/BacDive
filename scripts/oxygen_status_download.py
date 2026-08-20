@@ -1,9 +1,12 @@
 import json
 import bacdive
 import pandas as pd
+
+# bacdive api baglantisi yapildi
+
 client = bacdive.BacdiveClient()
 sp_list = []
-with open("data/species.txt", "r", encoding="utf-8") as f:
+with open("data/unique_species_names_list.txt", "r", encoding="utf-8") as f:
     for line in f:
         tur_adi = line.strip()
         if tur_adi:
@@ -42,3 +45,4 @@ for sp in sp_list:
 son_tablo = pd.DataFrame(rows)
 son_tablo.to_csv("results/tum_bakteriler_oxygen_tablosu.csv", index=False, encoding="utf-8-sig")
 print(son_tablo)
+
